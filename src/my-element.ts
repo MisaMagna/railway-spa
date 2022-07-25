@@ -1,5 +1,5 @@
 import { html, css, LitElement } from 'lit'
-import { customElement, property } from 'lit/decorators.js'
+import { customElement, property, state } from 'lit/decorators.js'
 import litLogo from './assets/lit.svg'
 
 /**
@@ -22,6 +22,10 @@ export class MyElement extends LitElement {
   @property({ type: Number })
   count = 0
 
+
+  @state()
+  myEnv = import.meta.env.VITE_MY_ENV_VAR;
+
   render() {
     return html`
       <div>
@@ -33,6 +37,7 @@ export class MyElement extends LitElement {
         </a>
       </div>
       <slot></slot>
+      <p>${this.myEnv}</p>
       <div class="card">
         <button @click=${this._onClick} part="button">
           count is ${this.count}
