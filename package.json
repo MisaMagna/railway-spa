@@ -14,7 +14,8 @@
   ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build"
+    "build": "tsc && vite build",
+    "start": "npx http-server ./dist"
   },
   "dependencies": {
     "lit": "^2.2.7"
