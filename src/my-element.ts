@@ -37,6 +37,7 @@ export class MyElement extends LitElement {
         </a>
       </div>
       <slot></slot>
+      <p>Removed Procfile</p>
       <p>${this.myEnv}</p>
       <div class="card">
         <button @click=${this._onClick} part="button">
